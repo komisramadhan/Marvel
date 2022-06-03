@@ -1,4 +1,5 @@
-gws rahma 
+
+fitri 
 #sertakan "iostream
 #sertakan "cmath"
 #include "iomanip"
