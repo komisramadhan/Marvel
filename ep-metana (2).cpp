@@ -1,6 +1,6 @@
-harus semangat 
-komis cakep
-#sertakan "iostream
+harus  semangat 
+rahma komis fitri yok kita bisa 
+#sertakan "i
 #sertakan "cmath"
 #include "iomanip"
 #include "fstream"
