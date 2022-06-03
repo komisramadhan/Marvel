@@ -1,5 +1,5 @@
 harus  semangat 
-rahma komis fitri yok kita bisa 
+ayok bisa pasti 
 #sertakan "i
 #sertakan "cmath"
 #include "iomanip"
