@@ -1,6 +1,6 @@
-KKita  nanti  buat MgCl2 ya guys 
-#sertakan "iostream"
-#include "cmath"
+gws rahma 
+#sertakan "iostream
+#sertakan "cmath"
 #include "iomanip"
 #include "fstream"
 
