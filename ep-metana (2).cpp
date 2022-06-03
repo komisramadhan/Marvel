@@ -1,5 +1,5 @@
 harus semangat 
-fitri 
+komis cakep
 #sertakan "iostream
 #sertakan "cmath"
 #include "iomanip"
