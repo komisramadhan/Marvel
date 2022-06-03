@@ -1,5 +1,5 @@
 harus  semangat 
-ayok bisa pasti 
+ku pasti bisa 
 #sertakan "i
 #sertakan "cmath"
 #include "iomanip"
