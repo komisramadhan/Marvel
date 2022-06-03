@@ -1,5 +1,5 @@
 harus  semangat 
-aduh pusing 
+Alhamdulillah ya Allah terima kasih banyak  
 #sertakan "i
 #sertakan "cmath"
 #include "iomanip"
