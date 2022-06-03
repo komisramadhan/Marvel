@@ -1,4 +1,4 @@
-
+harus semangat 
 fitri 
 #sertakan "iostream
 #sertakan "cmath"
