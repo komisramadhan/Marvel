@@ -1,5 +1,5 @@
-
-#include "iostream"
+KKita  nanti  buat MgCl2 ya guys 
+#sertakan "iostream"
 #include "cmath"
 #include "iomanip"
 #include "fstream"
