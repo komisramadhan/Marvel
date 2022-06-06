@@ -1,4 +1,4 @@
-
+%%writefile molekul-MgCl2.cpp
 #include "iostream"
 #include "cmath"
 #include "iomanip"
