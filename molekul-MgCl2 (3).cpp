@@ -37,7 +37,7 @@ int main(){
     file << setw(3) << "Cl1" << setw(3) << " " \
     << fixed << setprecision(3) << Cl1x << setw(3) << " " \
     << fixed << setprecision(3) << Cl1y << setw(3) << " " \
-    << fixed < setprecision(3) << Cl1z << "\n";
+    << fixed << setprecision(3) << Cl1z << "\n";
 
      file << setw(3) << "Cl2" << setw(3) << " " \
     << fixed << setprecision(3) << Cl1y << setw(3) << " " \
