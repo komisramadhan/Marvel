@@ -1,4 +1,4 @@
-%%writefile molekul-MgCl2.cpp
+%%  writefile   molekuler  -  MgCl2 . cpp
 #include "iostream"
 #include "cmath"
 #include "iomanip"
@@ -120,7 +120,7 @@ int main(){
     float Cl2x[N], Cl2y[N], Cl2z[N];
 
     /* Cl    Cl
-        \  /
+         \  /
          Mg
       molekul MgCl2 itu bentuk rigid
     */
