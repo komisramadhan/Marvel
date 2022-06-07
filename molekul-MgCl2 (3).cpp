@@ -17,9 +17,9 @@ int main(){
 
     // masukkan nilai untuk setiap variabel MgCl2
     Mgx = Mgy = Mgz = 0.0;
-    Cl1x = sin(88.75*pi/180) * 177.5;
+    Cl1x = sin(90*pi/180) * 2.350;
     Cl1y = 0.0;
-    Cl1z = cos(88.75*pi/180) * 177.5;
+    Cl1z = cos(90*pi/180) * 2.350;
 
     Cl2x = - Cl1x;
     Cl2y = Cl1y;
