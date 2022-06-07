@@ -67,7 +67,7 @@ float densitas;          /* densitas ini memiliki satuan g cm^-3
 float cm3_to_A3 = 1.0E-24;  
 float numb_mol;
 float Na = 6.022E23;            // bilangan avogadro    
-float Mr_air = 95.0;            // massa relatif dari MgCl2  
+float Mr_MgCl2 = 95.0;            // massa relatif dari MgCl2  
 int numb_lat;                   // panjang sel simulasi    
 int N;                          // jumlah molekul 
 float volum;                    // volume dari molekul MgCl2 
