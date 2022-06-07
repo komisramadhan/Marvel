@@ -33,6 +33,7 @@ int main(){
     << fixed << setprecision(3) << Mgx << setw(3) << " " \
     << fixed << setprecision(3) << Mgy << setw(3) << " " \
     << fixed << setprecision(3) << Mgz << "\n";
+    
 
     file << setw(3) << "Cl1" << setw(3) << " " \
     << fixed << setprecision(3) << Cl1x << setw(3) << " " \
@@ -150,7 +151,61 @@ int main(){
                 Cl1z[counter] = Mgz[counter] + rB_Cl1z;
 
                 Cl2x[counter] = Mgx[counter] + rB_Cl2x;
-                Cl2y[counter] = Mgy[counter] + rB_Cl2y;
+                Cl2y[counter] = Mgy[counter] + rB_Cl2y;Ep = 0.0;
+    for(int a = 0; a < (N-1); a++){
+        for(int b = (0+1); b < N; b++){
+            dx = Mgx[a] - Mgx[b];
+            dy = Mgy[a] - Mgy[b];
+            dz = Mgz[a] - Mgz[b];
+
+            dx = dx - round(dx/lx) * lx;
+            dy = dy - round(dy/ly) * ly;
+            dz = dz - round(dz/lz) * lz;
+
+            rij = pow(dx,2) + pow(dy,2) + pow(dz,2);
+            if(rij < rcut2){
+                rij6 = pow(rij,3);
+                rij12 = pow(rij6,2);
+                Ep = (A12/rij12) - (B6/rij6);
+                Ep_LJ = (A12/rij12) - (B6/rij6);
+                Ep += Ep_LJ;
+            }
+
+        }
+    }
+
+    cout << "Energi potensial dari molekul MgCl2 ruah: " \
+         << Ep/(float)N << "kj/mol";
+
+    // hasil iterasi dimasukkan ke dalam file xyz
+    ofstream file;
+    file.open("MgCl2-hitung_ep.xyz");
+    file << N << "\n" << endl;
+
+    int Nw = N/3;
+
+    // iterasi dalam output array 
+    for(int m = 0; m < Nw; m++){
+        file << setw(3) << "Mg" << setw(3) << " " \
+             << fixed << setprecision(3) << Mgx[m] << setw(3) << " " \
+             << fixed << setprecision(3) << Mgy[m] << setw(3) << " " \
+             << fixed << setprecision(3) << Mgz[m] << "\n";
+
+        file << setw(3) << "Cl" << setw(3) << " " \
+             << fixed << setprecision(3) << Cl1x[m] << setw(3) << " " \
+             << fixed << setprecision(3) << Cl1y[m] << setw(3) << " " \
+             << fixed << setprecision(3) << Cl1z[m] << "\n";
+
+        file << setw(3) << "Cl" << setw(3) << " " \
+             << fixed << setprecision(3) << Cl2x[m] << setw(3) << " " \
+             << fixed << setprecision(3) << Cl2y[m] << setw(3) << " " \
+             << fixed << setprecision(3) << Cl2z[m] << "\n";
+    }
+
+    file.close();
+
+    return 0;
+}
                 Cl2z[counter] = Mgz[counter] + rB_Cl2z;
 
                 counter += 1;
@@ -160,3 +215,61 @@ int main(){
     // main hitung energi potensial
     A12 = 4.0 * epsilon * pow(sigma,12);
     B6 = 4.0 * epsilon * pow(sigma, 6);
+
+    Ep = 0.0;
+    for(int a = 0; a < (N-1); a++){
+        for(int b = (0+1); b < N; b++){
+            dx = Mgx[a] - Mgx[b];
+            dy = Mgy[a] - Mgy[b];
+            dz = Mgz[a] - Mgz[b];
+
+            dx = dx - round(dx/lx) * lx;
+            dy = dy - round(dy/ly) * ly;
+            dz = dz - round(dz/lz) * lz;
+
+            rij = pow(dx,2) + pow(dy,2) + pow(dz,2);
+            if(rij < rcut2){
+                rij6 = pow(rij,3);
+                rij12 = pow(rij6,2);
+                Ep = (A12/rij12) - (B6/rij6);
+                Ep_LJ = (A12/rij12) - (B6/rij6);
+                Ep += Ep_LJ;
+            }
+
+        }
+    }
+
+    cout << "Energi potensial dari molekul MgCl2 ruah: " \
+         << Ep/(float)N << "kj/mol";
+
+    // hasil iterasi dimasukkan ke dalam file xyz
+    ofstream file;
+    file.open("MgCl2-hitung_ep.xyz");
+    file << N << "\n" << endl;
+
+    int Nw = N/3;
+
+    // iterasi dalam output array 
+    for(int m = 0; m < Nw; m++){
+        file << setw(3) << "Mg" << setw(3) << " " \
+             << fixed << setprecision(3) << Mgx[m] << setw(3) << " " \
+             << fixed << setprecision(3) << Mgy[m] << setw(3) << " " \
+             << fixed << setprecision(3) << Mgz[m] << "\n";
+
+        file << setw(3) << "Cl" << setw(3) << " " \
+             << fixed << setprecision(3) << Cl1x[m] << setw(3) << " " \
+             << fixed << setprecision(3) << Cl1y[m] << setw(3) << " " \
+             << fixed << setprecision(3) << Cl1z[m] << "\n";
+
+        file << setw(3) << "Cl" << setw(3) << " " \
+             << fixed << setprecision(3) << Cl2x[m] << setw(3) << " " \
+             << fixed << setprecision(3) << Cl2y[m] << setw(3) << " " \
+             << fixed << setprecision(3) << Cl2z[m] << "\n";
+    }
+
+    file.close();
+
+    return 0;
+}
+    
+    
