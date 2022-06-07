@@ -112,3 +112,51 @@ int main(){
 
      // deklarasi variabel
     float pi = 3.14;
+    
+    // deklarasi molekul MgCl2 
+    float Mgx[N], Mgy[N], Mgz[N];
+    float Cl1x[N], Cl1y[N], Cl1z[N];
+    float Cl2x[N], Cl2y[N], Cl2z[N];
+
+    /* Cl    Cl
+        \  /
+         Mg
+      molekul MgCl2 itu bentuk rigid
+    */
+
+    float rB_Mgx = 0.0;
+    float rB_Mgy = 0.0;
+    float rB_Mgz = 0.0;
+
+    float rB_Cl1x = sin((104.52/2.0)*pi/180.0) * 1.0;
+    float rB_Cl1y = 0.0;
+    float rB_Cl1z = cos((104.52/2.0)*pi/180.0) * 1.0;
+
+    float rB_Cl2x = - rB_Cl1x;
+    float rB_Cl2y = rB_Cl1y;
+    float rB_Cl2z = rB_Cl1z;
+
+    int counter = 0;
+    for(int i = 0; i < numb_lat; i++){ //x
+        for(int j = 0; j < numb_lat; j++){ //y
+            for(int k = 0; k < numb_lat; k++){ //z
+                
+                Mgx[counter] = rB_Mgx + (i*lat);
+                Mgy[counter] = rB_Mgy + (j*lat);
+                Mgz[counter] = rB_Mgz + (k*lat);
+
+                Cl1x[counter] = Mgx[counter] + rB_Cl1x;
+                Cl1y[counter] = Mgy[counter] + rB_Cl1y;
+                Cl1z[counter] = Mgz[counter] + rB_Cl1z;
+
+                Cl2x[counter] = Mgx[counter] + rB_Cl2x;
+                Cl2y[counter] = Mgy[counter] + rB_Cl2y;
+                Cl2z[counter] = Mgz[counter] + rB_Cl2z;
+
+                counter += 1;
+            }
+        }
+    }
+    // main hitung energi potensial
+    A12 = 4.0 * epsilon * pow(sigma,12);
+    B6 = 4.0 * epsilon * pow(sigma, 6);
