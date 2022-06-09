@@ -62,6 +62,8 @@ int main(){
     float Mgx[N], Mgy[N], Mgz[N];
     float Cl1x[N], Cl1y[N], Cl1z[N];
     float Cl2x[N], Cl2y[N], Cl2z[N];
+  
+    /* Cl - Mg - Cl
 
       molekul MgCl2 itu bentuk rigid
     */
