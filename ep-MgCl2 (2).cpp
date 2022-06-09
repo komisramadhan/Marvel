@@ -72,9 +72,9 @@ int main(){
     float rB_Mgy = 0.0;
     float rB_Mgz = 0.0;
 
-    float rB_Cl1x = sin((180.0/2.0)*pi/180.0) * 1.0;
+    float rB_Cl1x = sin((180.0/2.0)*pi/180.0) * 2.350;
     float rB_Cl1y = 0.0;
-    float rB_Cl1z = cos((180.0/2.0)*pi/180.0) * 1.0;
+    float rB_Cl1z = cos((180.0/2.0)*pi/180.0) * 2.350;
 
     float rB_Cl2x = - rB_Cl1x;
     float rB_Cl2y = rB_Cl1y;
